@@ -3,7 +3,7 @@ LABEL maintainer "j"
 
 ENV DEBIAN_FRONTEND noninteractive
 
-ENV ENPASS_VERSION 6.0.6
+ENV ENPASS_VERSION 6.0.6.323
 RUN apt-get update \
     && apt-get install -y software-properties-common curl \
     && add-apt-repository "deb http://repo.sinew.in/ stable main" \
