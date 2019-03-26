@@ -11,7 +11,7 @@ RUN apt-get update \
     && apt-get update \
     && apt-get install -y --no-install-recommends \
         qt5-default libpulse0 libcurl3 libgtk-3-0 \
-        enpass \
+        enpass=${ENPASS_VERSION} \
     && apt-get autoclean \
     && apt-get autoremove \
     && rm -rf /var/lib/apt/lists/*
