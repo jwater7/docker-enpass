@@ -10,11 +10,11 @@ RUN apt-get update \
     && curl -fsSL https://dl.sinew.in/keys/enpass-linux.key | apt-key add - \
     && apt-get update \
     && apt-get install -y --no-install-recommends \
-        qt5-default libpulse0 \
-        enpass=${ENPASS_VERSION} \
+        qt5-default libpulse0 libcurl3 libgtk-3-0 \
+        enpass \
     && apt-get autoclean \
     && apt-get autoremove \
     && rm -rf /var/lib/apt/lists/*
 
-CMD [ "/opt/Enpass/bin/runenpass.sh" ]
+CMD [ "/opt/enpass/Enpass" ]
 
